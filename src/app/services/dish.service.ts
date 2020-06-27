@@ -7,6 +7,7 @@ import { DISHES } from '../shared/dishes';
 })
 
 export class DishService {
+  [x: string]: any;
 
   getDish(id: string): Dish {
     return DISHES.filter((dish) => (dish.id === id))[0];
