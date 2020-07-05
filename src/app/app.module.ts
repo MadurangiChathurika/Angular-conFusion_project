@@ -21,6 +21,8 @@ import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
+import { LoginComponent } from './login/login.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,7 @@ import { ContactComponent } from './contact/contact.component';
     AboutComponent,
     HomeComponent,
     ContactComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,12 +46,17 @@ import { ContactComponent } from './contact/contact.component';
     MatCardModule,
     MatButtonModule,
     AppRoutingModule,
+    MatDialogModule,
 
   ],
   providers: [
     DishService,
     PromotionService,
     LeaderService,
+  ],
+
+  entryComponents: [
+    LoginComponent
   ],
   bootstrap: [AppComponent]
 })
